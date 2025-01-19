@@ -33,8 +33,6 @@ vendor/etc/pwr/VideoPowerOptFeature.xml
 vendor/lib/libcamxexternalformatutils.so
 vendor/lib64/libC2D2.so
 vendor/lib64/libc2d_helper.so
-vendor/lib/libbitmlengine.so
-vendor/lib/libbitmlenginev2.so
 vendor/lib64/libhdr_impl.so
 vendor/lib64/camera/fdconfigpreview.bin
 vendor/lib64/camera/fdconfigpreviewlite.bin
@@ -94,7 +92,6 @@ vendor/lib64/libmmcamera_mfnr.so
 vendor/lib64/libmmcamera_mfnr_t4.so
 vendor/lib64/libmmcamera_pdpc.so
 vendor/lib64/libmot_afd.so
-vendor/lib64/libmotohid.so
 vendor/lib64/libmpbase.so
 vendor/lib64/libofflinedump.so
 vendor/lib64/libofflinelog.so
