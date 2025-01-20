@@ -31,7 +31,6 @@ vendor/etc/bstconfig/hdrcfg.cfg
 vendor/etc/pwr/PowerFeatureConfig.xml
 vendor/etc/pwr/VideoPowerOptFeature.xml
 vendor/lib/libcamxexternalformatutils.so
-vendor/lib64/libC2D2.so
 vendor/lib64/libc2d_helper.so
 vendor/lib64/libhdr_impl.so
 vendor/lib64/camera/fdconfigpreview.bin
@@ -108,8 +107,6 @@ vendor/lib64/libtfestriping.so
 vendor/lib64/libthreadutils.so
 vendor/lib64/libvidhance.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
-vendor/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so
-vendor/lib64/vendor.qti.hardware.scve.panorama@1.0.so
 
 # Camera - Motorola
 vendor/etc/init/motorola.hardware.camera.imgtuner@2.0-service.rc
