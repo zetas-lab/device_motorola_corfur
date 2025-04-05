@@ -10,30 +10,29 @@
 TARGET_IS_VAB := true
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 1600
-TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_HEIGHT := 2400
+TARGET_SCREEN_WIDTH := 1080
 
 # Screen
-TARGET_SCREEN_DENSITY := 280
+TARGET_SCREEN_DENSITY := 400
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := 280dpi
+PRODUCT_AAPT_PREF_CONFIG := 400dpi
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
-PRODUCT_SHIPPING_API_LEVEL := 34
+PRODUCT_SHIPPING_API_LEVEL := 31
 
 # Inherit from motorola sm6375-common
 $(call inherit-product, device/motorola/sm6375-common/common.mk)
 
 # Overlays
 PRODUCT_PACKAGES += \
-    FrameworksResFogos \
-    LineageSystemUIFogos \
-    ProductFrameworksResFogos \
-    SettingsProviderResFogos \
-    SystemUIResFogos \
-    WifiResFogos
+    FrameworksResRhodep \
+    LineageSystemUIRhodep \
+    SettingsProviderResRhodep \
+    SystemUIResRhodep \
+    WifiResRhodep
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -46,13 +45,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     $(LOCAL_PATH)/audio/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
 
-# Camera
-PRODUCT_PACKAGES += \
-    libgui_shim_vendor
-
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.fogos \
+    android.hardware.biometrics.fingerprint@2.1-service.rhodep \
     com.motorola.hardware.biometric.fingerprint@1.0.vendor
 
 $(foreach f,$(wildcard $(LOCAL_PATH)/configs/idc/*.idc),\
@@ -70,7 +65,7 @@ $(foreach f,$(wildcard $(LOCAL_PATH)/rootdir/bin/*.sh),\
 
 # Lineage Touch
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.fogos
+    vendor.lineage.touch@1.0-service.rhodep
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -85,11 +80,7 @@ PRODUCT_PACKAGES += \
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml \
     frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hcef.xml \
-    frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.uicc.xml \
-    frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.xml \
-    frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.telephony.euicc.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.nxp.mifare.xml
 
 # Sensors
@@ -100,4 +91,4 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/motorola/fogos/fogos-vendor.mk)
+$(call inherit-product, vendor/motorola/rhodep/rhodep-vendor.mk)

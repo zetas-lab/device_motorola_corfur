@@ -1,1 +1,1 @@
-# Device configuration files for Motorola moto g34 5G (fogos)
+# Device configuration files for Motorola moto g82 5G (rhodep)

@@ -9,6 +9,7 @@ from extract_utils.fixups_blob import (
     blob_fixups_user_type,
 )
 from extract_utils.fixups_lib import (
+    lib_fixup_remove,
     lib_fixups,
     lib_fixups_user_type,
 )
@@ -32,15 +33,17 @@ namespace_imports = [
 
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
+    (
+        'libpowercore',
+        'libmmcamera_mfnr',
+    ): lib_fixup_remove,
 }
 
 blob_fixups: blob_fixups_user_type = {
-    ('vendor/lib/libmot_chi_desktop_helper.so', 'vendor/lib64/libmot_chi_desktop_helper.so'): blob_fixup()
-        .add_needed('libgui_shim_vendor.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'fogos',
+    'rhodep',
     'motorola',
     namespace_imports=namespace_imports,
     blob_fixups=blob_fixups,

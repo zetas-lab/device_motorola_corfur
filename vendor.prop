@@ -1,13 +1,8 @@
 # Bluetooth
-bluetooth.device.default_name=moto g34 5G
+bluetooth.device.default_name=moto g82 5G
 
 # Camera
-persist.vendor.camera.physical.num=3
-
-# Display
-ro.vendor.display.svi=1
-vendor.display.svi.config=1
-vendor.display.svi.config_path=/vendor/etc/SVIConfig.xml
+persist.vendor.camera.physical.num=4
 
 # Motorola
 ro.mot.build.customerid=global
@@ -16,4 +11,4 @@ ro.mot.build.customerid=global
 persist.vendor.nfc.config_secfile_name=libnfc-sec-nci.conf
 
 # Surfaceflinger
-ro.sf.lcd_density=280
+ro.sf.lcd_density=400
