@@ -9,7 +9,7 @@ ro.mot.build.customerid=global
 
 # NFC
 ro.vendor.hw.nfc=samsung
-persist.vendor.nfc.config_secfile_name=libnfc-sec-nci.conf
+persist.vendor.nfc.config_secfile_name=libnfc-nci.conf
 
 # Surfaceflinger
 ro.sf.lcd_density=400
