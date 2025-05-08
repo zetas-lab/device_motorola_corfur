@@ -402,5 +402,4 @@ vendor/etc/sensors/proto/tcs3708.proto
 vendor/etc/sensors/sns_reg_config
 
 # Thermal configs
-vendor/etc/thermal-engine-rhodep.conf
 vendor/etc/thermal-engine.conf
