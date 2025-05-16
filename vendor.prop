@@ -1,5 +1,5 @@
 # Bluetooth
-bluetooth.device.default_name=moto g82 5G
+bluetooth.device.default_name=moto g71 5G
 
 # Camera
 persist.vendor.camera.physical.num=4
@@ -12,4 +12,4 @@ ro.vendor.hw.nfc=samsung
 persist.vendor.nfc.config_secfile_name=libnfc-nci.conf
 
 # Surfaceflinger
-ro.sf.lcd_density=400
+ro.sf.lcd_density=420

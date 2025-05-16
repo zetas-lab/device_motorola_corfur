@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_rhodep.mk
+    $(LOCAL_DIR)/lineage_corfur.mk

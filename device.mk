@@ -14,25 +14,25 @@ TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
 # Screen
-TARGET_SCREEN_DENSITY := 400
+TARGET_SCREEN_DENSITY := 420
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := 400dpi
+PRODUCT_AAPT_PREF_CONFIG := 420dpi
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
-PRODUCT_SHIPPING_API_LEVEL := 31
+PRODUCT_SHIPPING_API_LEVEL := 30
 
 # Inherit from motorola sm6375-common
 $(call inherit-product, device/motorola/sm6375-common/common.mk)
 
 # Overlays
 PRODUCT_PACKAGES += \
-    FrameworksResRhodep \
-    LineageSystemUIRhodep \
-    SettingsProviderResRhodep \
-    SystemUIResRhodep \
-    WifiResRhodep
+    FrameworksResCorfur \
+    LineageSystemUICorfur \
+    SettingsProviderResCorfur \
+    SystemUIResCorfur \
+    WifiResCorfur
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -47,7 +47,7 @@ PRODUCT_COPY_FILES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.rhodep \
+    android.hardware.biometrics.fingerprint@2.1-service.corfur \
     com.motorola.hardware.biometric.fingerprint@1.0.vendor
 
 $(foreach f,$(wildcard $(LOCAL_PATH)/configs/idc/*.idc),\
@@ -65,7 +65,7 @@ $(foreach f,$(wildcard $(LOCAL_PATH)/rootdir/bin/*.sh),\
 
 # Lineage Touch
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.rhodep
+    vendor.lineage.touch@1.0-service.corfur
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -88,7 +88,7 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    sensors.rhodep
+    sensors.corfur
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
@@ -98,7 +98,7 @@ PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
 # Thermal
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermal-engine-rhodep.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-rhodep.conf
+    $(LOCAL_PATH)/configs/thermal-engine-corfur.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-rhodep.conf
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/motorola/rhodep/rhodep-vendor.mk)
+$(call inherit-product, vendor/motorola/corfur/corfur-vendor.mk)
